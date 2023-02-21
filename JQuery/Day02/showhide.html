@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/event.css" type="text/css">
+    <script src="/JS/jquery-1.11.0.min.js"></script>
+    <script>
+         $(function(){
+            /*
+            $("#sh > input:eq(0)").click(function(){
+                $("#sh > div").show(200);
+            });
+
+            $("#sh > input:eq(1)").click(function(){
+                $("#sh > div").hide(200);
+            });
+
+            $("#sh > input:eq(2)").click(function(){
+                $("#sh > div").toggle(200);
+            });*/
+
+            $("#sh > input:eq(0)").click(function(){
+                $("#sh > div").fadeIn(2000);
+            });
+
+            $("#sh > input:eq(1)").click(function(){
+                $("#sh > div").fadeOut(2000);
+            });
+
+            $("#sh > input:eq(2)").click(function(){
+                $("#sh > div").fadeToggle(2000);
+            });
+
+         });
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <h1> show/hide</h1>
+    <div id="sh">
+        <input type="button" value="보이기">
+        <input type="button" value="숨기기">
+        <input type="button" value="토글">
+        <div>
+            <img src="/IMG/img/kaka1.jpg" width="300px" height="200px">
+        </div>
+
+    </div>
+</body>
+</html>

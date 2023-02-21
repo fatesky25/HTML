@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            background: #98bf21;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            left: 0;
+        }
+    </style>
+    <script src="/JS/jquery-1.11.0.min.js"></script>
+    <script>
+        $(function () {
+            $("button:eq(0)").click(function () {
+                $("#animation-area").html("<div id='box'></div>");
+            });
+
+            $("button:eq(1)").click(function () {
+                $("#box").animate({
+                    'left': '250px'
+                }, 1000, 'swing', function () {
+                    alert("애니메이션이 종료되었습니다.");
+
+                });
+
+            });
+
+            $("button:eq(2)").click(function () {
+                $("div").animate({
+                    left: '250px',
+                    height: '150px',
+                    width: '150px'
+
+                });
+
+            });
+
+            $("button:eq(3)").click(function () {
+                $("div").animate({
+                    left: '+=50px',
+                    height: '+=50px',
+                    width: '+=50px'
+                }, 300);
+            });
+
+            $("button:eq(4)").click(function () {
+                var div = $('#box');
+
+                div.animate({ height: '300px' }, 1000);
+                div.animate({ width: '300px' }, 500);
+                div.animate({ height: '100px' }, 800);
+                div.animate({ width: '100px' }, 300);
+
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <h1>Animate</h1>
+    <button>Reset</button>
+    <button>ani1</button>
+    <button>ani2</button>
+    <button>ani3</button>
+    <button>ani4</button>
+    <div id="animation-area">
+        <div id="box"></div>
+    </div>
+</body>
+
+</html>

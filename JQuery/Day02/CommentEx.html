@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/JS/comment.css">
+    <script src="/JS/jquery-1.11.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#comment_form").submit(function(){
+                if(!$("#user_name").val()){
+                    alert("이름을 입력해주세요.")
+                    $("#user_name").focus();
+                    return false;
+                }
+
+                if(!$("#comment").val()){
+                    alert("내용을 입력해주세요.")
+                    $("#comment").focus();
+                    return false;
+                }
+
+                // 작성날짜 만들기
+                var date = new Date();
+
+                var yy = date.getFullYear();
+                var mm = date.getMonth()+1;
+                var dd = date.getDate();
+
+                var hh = date.getHours();
+                var mi = date.getMinutes();
+                var ss = date.getSeconds();
+
+                if(mm < 10){mm = "0" + mm;}
+                if(dd < 10){dd = "0" + dd;}
+                if(hh < 10){hh = "0" + hh;}
+                if(mi < 10){mi = "0" + mi;}
+                if(ss < 10){ss = "0" + ss;}
+
+                var today = yy+"-"+mm+"-"+dd+" "+hh+":"+mi+":"+ss;
+
+                var new_li = $("<li>");
+                    new_li.addClass("comment_item");
+                
+                var writer_p = $("<p>");
+                    writer_p.addClass("writer");
+
+                var name_span = $("<span>");
+                    name_span.addClass("name");
+                    name_span.html($("#user_name").val()+"님");
+
+                var date_span = $("<span>");
+                    date_span.html(" / " + today + " ");
+                    
+                var del_input = $("<input>");
+                    del_input.attr({
+                        "type":"button",
+                        "value":"삭제"
+                    })
+                    del_input.addClass("delete_btn");
+
+                var content_p = $("<p>");
+                    content_p.html($("#comment").val());
+
+                    writer_p.append(name_span).append(date_span).append(del_input);
+                    new_li.append(writer_p).append(content_p);
+                    $("#comment_list").append(new_li);
+
+                    $("#user_name").val("");
+                    $("#comment").val("");
+
+                    return false;
+            })
+            $(document).on("click", ".delete_btn", function(){
+                if(confirm("정말로 선택하신 항목을 삭제하시겠습니까??")){
+                    $(this).parents(".comment_item").remove();
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>댓글작성</h1>
+        <div id="comment_write">
+            <form action="" id="comment_form">
+                <div>
+                    <label for="user_name">작성자</label>
+                    <input type="text" name="user_name" id="user_name">
+                    <input type="submit" value="저장">
+                </div>
+                <div>
+                    <label for="comment">댓글 내용</label>
+                    <textarea name="comment" id="comment"></textarea>
+                </div>
+            </form>
+        </div>
+        <ul id="comment_list">
+            <li>
+
+            </li>
+        </ul>
+
+
+    </div>
+</body>
+</html>

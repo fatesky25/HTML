@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            margin: 10px auto;
+            border: 5px solid #ccc;/*solid 실선*/
+            padding: 30px ;
+            text-align:  center;  
+        }  
+        .box2 {
+            margin: 10px auto;
+            border: 10px solid #f0f;/*solid 실선*/
+            background-color: #ff0;
+            padding: 25px ;
+            text-align:  left;   /*글자 정렬*/
+        }  
+
+        
+
+    </style>
+    <script>
+
+        function setFontColor(color) {
+            var box = document.getElementById("box");
+            box.style.color =color;
+
+        }
+        
+        function setBgColor(color) {
+            var box = document.getElementById("box");
+            box.style.backgroundColor =color;
+
+        }
+        
+        function setWidth(width) {
+            var box = document.getElementById("box");
+            box.style.width =width;
+
+        }
+        
+        function changeClass(cls) {
+            var box = document.getElementById("box");
+            box.className =cls;
+
+        }
+
+        
+
+
+    </script>
+</head>
+<body> 
+    <div id="box" class="box1"><h1> 실행영역</h1> </div>    
+    <input type="button" value="(폰트) red" onclick="setFontColor('#f00')">
+    <input type="button" value="(폰트) green" onclick="setFontColor('#0f0') ">
+    <input type="button" value="(폰트) blue" onclick="setFontColor('#00f') ">
+    <input type="button" value="(배경) red" onclick="setBgColor('#f00') ">
+    <input type="button" value="(배경) green" onclick="setBgColor('#0f0') ">
+    <input type="button" value="(배경) blue" onclick="setBgColor('#00f') ">
+    <input type="button" value="width=50% " onclick="setWidth('50%') ">
+    <input type="button" value="width=auto " onclick="setWidth('auto') ">
+    <input type="button" value="box1 클래스적용" onclick="changeClass('box1 ')">
+    <input type="button" value="box2 클래스 적용" onclick="changeClass('box2') ">
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>화면</title>
+    <script>
+        document.write("<h1> 화면 높이"+screen.availHeight +"</h1>");
+        document.write("<h1> 화면 넓이"+screen.availWidth +"</h1>");
+        document.write("<h1> 색상 수"+screen.colorDepth +"</h1>");
+        document.write("<h1> 픽셀 높이"+screen.height +"</h1>");
+        document.write("<h1> 픽셀 넓이"+screen.width +"</h1>");
+        document.write("<h1> 픽셀 비트수"+screen.pixelDepth +"</h1>");
+        document.write("<hr>");
+
+        function getCenterPixcel() {
+            var center = new Array(parseInt(screen.availWidth/2),
+            parseInt(screen.availHeight/2));
+            return center;
+        }
+         //document = 문서의관한 객체
+        var screenCenter = getCenterPixcel();
+        document.write("<h1>화면의 중심좌표 :x="+screenCenter[0]+"px,y="+screenCenter[1]+"px <h1>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>창열기</title>
+    <script>
+        //scrollbar = 스크롤표시 // toobar =메뉴보기 //status=상태표시 //location = 주소표시줄 
+        function open1(){//하나만새창열림
+            window.open('openEx.html');
+        }
+
+        function open2() {//클릭할때마다 새로운창이 열림
+            window.open('openEx.html',"",'width=300, height=500,scrollbars=no,toolbar=no,menubar=no,status=no,location=no');
+        }
+
+        function open3(url) {
+            window.open(url,'mywin','width=500, height=300,scrollbars=no,toolbar=no,menubar=no,status=no,location=no');
+        }
+     //url 구성요소 : 프로토콜 = http:// https://,서버주소 = www.뭐시기.com,포트번호:80번,경로명= 뭐시기/뭐시기/뭐시기,웹페이지 파일이름 = indexhtml
+    </script>
+</head>
+<body>
+    <h3> open 메소드 </h3>
+    <div>
+        <a href="#" onclick="open1()"> 새창 열기 </a>
+        <br> 
+        <a href="#" onclick="open2()"> 팝업창 열기 </a>
+        <br>
+
+        <a href="#" onclick="open3('http://naver.com'); return false;"> 팝업창 열기(파라미터를 포함한 함수호출) </a>
+        <br>  
+        <a href="#" onclick="open3('http://www.daum.net'); return false;"> 팝업창 열기(파라미터를 포함한 함수호출) </a>
+      
+        
+    </div>
+</body>
+</html>

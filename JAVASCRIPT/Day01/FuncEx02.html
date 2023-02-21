@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>isNaN</title>
+    <script>
+
+        //NaN : Not a Number
+
+        var a = Number("a");
+        var r1 = !isNaN(a);
+        document.write("<h1> r1 =" + r1 + "</h1>");
+        document.write("<h1> a =" + a + "</h1>");
+
+        var a_sum = a + 1;//NaN + 1 = NaN1이 아닌 NaN이된다
+        document.write("<h1> a_sum =" + a_sum + "</h1>");
+
+        var a_str = a + "str";
+        document.write("<h1> a_str =" + a_str + "</h1>");
+
+        function sumInt(x, y) {
+            var isStrX = !isNaN(x);
+            var isStrY = !isNaN(y);
+
+            if (!isStrX || !isStrY) {
+                //둘중 하나라도 숫자가 아니라면 실행을 중단
+                return "숫자 형태이거나 숫자값이 전달되어야합니다.";
+            }
+
+            var result = parseInt(x) + parseInt(y);
+            return result;
+        }
+
+        var s1 = sumInt("1", 1);
+        var s2 = sumInt("a", 1);
+        document.write("<h1> s1 =" + s1 + "</h1>");
+        document.write("<h1> s2 =" + s2 + "</h1>");
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

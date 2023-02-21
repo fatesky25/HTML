@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/event.css" type="text/css">
+    <script src="/JS/jquery-1.11.0.min.js"></script>
+    <script>
+        $(function(){
+     /*       
+     $('#input').mousedown(function(){
+        $('#result').html("Mouse Down Event ...");
+     });
+
+     $('#input').mouseup(function(){
+        $('#result').html("Mouse Up Event ...");
+     });
+      */
+
+      $('#input').click(function(){
+        $('#result').html("Mouse Click Event ...");
+     });
+
+     $('#input').dblclick(function(){
+        $('#result').html("Mouse dblclick Event ...");
+     });
+
+
+     $('#input').hover(function(){
+        //마우스가 올라감
+        $('#result').html("Mouse Enter Event ...");
+     },function(){
+        //빠져나감
+        $('#result').html("Mouse Leave Event ...");
+     });
+
+     /*
+     $('#input').mouseenter(function(){
+        $('#result').html("Mouse Enter Event ...");
+     });
+      
+     $('#input').mouseleave(function(){
+        $('#result').html("Mouse Leave Event ...");
+     });
+     */ 
+      
+    });
+
+    </script>
+</head>
+<body>
+    <h1>마우스 이벤트</h1>
+    <div id="input">
+         
+    </div>
+    <h2>결과</h2>
+    <div id="result"></div>
+</body>
+</html>

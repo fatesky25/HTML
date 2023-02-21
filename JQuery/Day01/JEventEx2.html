@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/event.css" type="text/css">
+    <script src="/JS/jquery-1.11.0.min.js"></script>
+    <script>
+        $(function(){
+/*
+            var down_count=0;
+
+            var up_count=0;
+
+            $("#input > input[type='text']").keydown(function(){
+                down_count++;
+                $('#result').html("down_count : "+down_count+"/up_count:"+up_count);
+            });
+
+            
+            $("#input > input[type='text']").keyup(function(){
+                up_count++;
+                $('#result').html("down_count : "+down_count+"/up_count:"+up_count);
+            });
+*/
+                   var count=0;
+
+$("#input > input[type='text']").keypress(function(){
+    count++;
+    $('#result').html("count : "+count);
+});
+
+
+
+        });
+
+
+
+
+
+
+
+
+
+    </script>
+
+</head>
+<body>
+    <h1>key 이벤트</h1>
+    <div id="input">
+         <input type="text">
+    </div>
+    <h2>결과</h2>
+    <div id="result"></div>
+</body>
+</html>

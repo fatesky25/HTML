@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="/JS/jquery-1.11.0.min.js"></script>
+    
+    <script>
+        
+        var sayHello ={
+            
+            "name":"javascript",
+            "eng" :function(){
+                var console = document.getElementById("console");
+                console.innerHTML ="Hello " + this.name;
+                console.style.color="#f00";
+            },
+            "kor":function() {
+                var console = document.getElementById("console");
+                console.innerHTML ="안녕하세요 " + this.name;
+                console.style.color="#00f";
+                
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1> json으로 함수호출</h1>
+    <input type="button" value="sayEng" onclick="sayHello.eng()">
+    <input type="button" value="sayKor" onclick="sayHello.kor()">
+    <h1 id="console"></h1>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키보드 감지 기능</title>
+    <link rel="stylesheet" href="/CSS/event.css" type="text/css">
+    <script src="/JS/jquery-1.11.0.min.js"></script>
+    <script>
+
+        function getkeyName(keyCode) {
+            var keyMap = [
+                { code: 8, name: "backspace" },
+                { code: 9, name: "tap" },
+                { code: 13, name: "enter" },
+                { code: 16, name: "shift" },
+                { code: 17, name: "ctrl" },
+                { code: 18, name: "alt" },
+                { code: 19, name: "pausebreak" },
+                { code: 20, name: "capslock" },
+                { code: 21, name: "han/eng" },
+                { code: 25, name: "hanja" },
+                { code: 27, name: "backspace" },
+            ];
+
+            for (var i = 0; i < keyMap.length; i++) {
+
+                if (keyMap[i].code == keyCode) {
+                    return keyMap[i].name;
+                }
+            }
+        }
+
+
+        $(function () {
+            $("#input > input[type='text']").keydown(function (e) {
+                $('#result').html(e.which + "번 키눌러짐 &gt;&gt; " + getkeyName(e.which));
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <h1>key 이벤트</h1>
+    <div id="input">
+        <input type="text">
+    </div>
+    <h2>결과</h2>
+    <div id="result"></div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+       function random(n1,n2) {
+         return parseInt (Math.random()*(n2-n1+1))+n1;
+       }
+
+       var num = random(0, 9);
+       document.write("<h1>0 ~ 9 사이의 난수 :"+num+"</h1>");
+
+       // 랜덤 함수 응용 ==> 인증번호 생성
+       var aa ="";
+       for(var i = 0; i < 5; i++){
+           aa += random (0,9);
+       }
+
+       document.write("<h1>인증 번호 :"+aa+"</h1>");
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

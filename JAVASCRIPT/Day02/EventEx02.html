@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #myid {
+            background: #ff0;
+            font-size: 20px;
+            font-weight: bold;
+            color: #00f;
+        }
+    </style>
+    <script>
+        // 자바스크립트는 중복아이디를 인식하지 못하고,
+        // 가장 먼저 나타나는 id값 만을 인식함
+        function doPrint() {
+            document.getElementById("myid").innerHTML = "스크립트가 실행되었습니다."
+        }
+    </script>
+
+    <h1 id="myid">안녕하세요.</h1>
+    <h1 id="myid">홍길동입니다.</h1>
+    <h1 id="myid">오늘도 열공 모드 유지 하세요.</h1>
+    <a href="#" onclick="doPrint()">자바스클립트 메소드 호출</a>
+</head>
+
+<body>
+
+</body>
+
+</html>

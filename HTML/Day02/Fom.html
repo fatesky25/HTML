@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>폼</title>
+</head>
+<body>
+    <h3>좋아하는 운동 ?</h3>
+   <form>
+        축구<input type="checkbox" value="1">
+        야구<input type="checkbox" value="2">
+        농구<input type="checkbox" value="3" checked>
+   </form>
+
+   <br>
+   <h3>좋아하는 운동 ?</h3>
+   <form>
+        축구<input type="radio" name="kor" value="1">
+        야구<input type="radio" name="kor" value="2">
+        농구<input type="radio" name="kor" value="3" checked>
+   </form>
+
+   <h3>좋아하는 운동 ?</h3>
+   <form>
+        <select> name="kor"
+            <option value="1"축구></option>
+            <option value="2"야구></option>
+            <option value="3"selected>농구</option>
+        </select>
+        축구<input type="radio" name="kor" value="1">
+        야구<input type="radio" name="kor" value="2">
+        농구<input type="radio" name="kor" value="3" checked>
+   </form>
+
+   <form>
+      색 선택
+      <input type="color" 
+      value="#00BFFF" onchange="document.body.style.color=this.value">
+   </form>
+
+   <br>
+   <h3>시간정보</h3>
+   <form>
+     <pre>
+        month : <input type="month" value="2023-01"><br>
+        week  : <input type="week" value="2023-W01"><br>
+        date  : <input type="date" value="2023-01-11"><br>
+        time  : <input type="time" value="11:53"><br>
+        local : <input type="datetime-local" value="2023-01-11T11:54:03">
+     </pre>
+   </form>
+
+   <br>
+
+   <h3>온도조절</h3>
+   <form>
+     <input type="range" min="10" max="30" list="listex">
+     <datalist id="listex">
+        <option value="12" label="low"></option>
+        <option value="20" label="Med"></option>
+        <option value="28" label="high"></option>
+     </datalist>
+
+   </form>
+
+   <br><br>
+   <h3>회원 정보 입력</h3>
+   <form>
+    email : <input type="email" placeholder="aaa@naver.com"><br>
+    전화번호 : <input type="tel" placeholder="010-0000-0050"><br>
+    홈페이지 : <input type="url" placeholder="test.dothome.co.kr"><br>
+    <input type="submit" value="확인">
+   </form>
+
+   <form>
+    <fieldset>
+        <legend>회원정보</legend>
+    email : <input type="email" placeholder="aaa@naver.com"><br>
+    전화번호 : <input type="tel" placeholder="010-0000-0050"><br>
+    홈페이지 : <input type="url" placeholder="test.dothome.co.kr"><br>
+    </fieldset>
+    <input type="submit" value="확인">
+   </form>
+
+    
+
+    
+</body>
+</html>

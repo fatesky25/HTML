@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Position </title>
+    <style>
+        div {
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            border: 1px solid lightgray;
+            text-align: center;
+            color: white;
+            background: red;
+        }
+
+        #down:hover {
+           position: relative;
+           left: 20px;
+           top: 20px;
+           background: blue;
+        }
+
+        .up:hover {
+            position: relative;
+           right: 20px;
+           bottom: 20px;
+           background: green;
+        }
+    </style>
+</head>
+<body>
+    <h3> Position </h3>
+    <hr>
+    <div>あ</div>
+    <div id="down">り</div>
+    <div>が</div>
+    <div>と</div>
+    <div class="up">う</div>
+    <div>s</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //2차원 배열 생성
+        var myarray = [
+            ["홍길동", "조선의의적", "보스"],
+            ["임꺽정", "조선의의적", "보스"]
+        ];
+
+        //출력
+        for (var i = 0; i < myarray.length; i++) {
+            for (var j = 0; j < myarray[i].length; j++) {
+                document.write("<h1>" + myarray[i][j] + "</h1>");
+            }
+        }
+
+        document.write("<br>");
+        var str = "홍길동/28세/남자멋짐";
+        var data = str.split("/");
+
+        for (let i = 0; i < data.length; i++) {
+            document.write("<h1>" + data[i] + "</h1>");
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>페이지 전환1</title>
+    <script>
+        var info="<h1>브라우저 정보확인</h1>";
+        info += "<p> 브라우저 이름:"+navigator.appName+"</p>";
+        info += "<p> 브라우저 코드명:"+navigator.appCodeName+"</p>";
+        info += "<p> 사용자 정보:"+navigator.userAgent+"</p>";
+        info += "<p> 브라우저 버전:"+navigator.appVersion+"</p>";
+        info += "<p> 플렛폼 정보:"+navigator.platform+"</p>";
+
+        document.write(info);
+
+    </script>
+</head>
+<body>
+    <a href="HistoryEx2.html">페이지 이동</a>
+    <!-- <a href="#" onclick="history.forward(); return false;">앞으로</a> -->
+    <a href="#" onclick="history.go(1); return false;">앞으로</a>
+</body>
+</html>

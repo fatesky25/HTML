@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        //요일의 이름을 저장하고 있는 배열 생성
+        var days = ["일", "월", "화", "수", "목", "금", "토"]; //days 라는 배열 생성
+
+        var mydate = new Date(); // mydate라는 객체 생성 
+        /*      
+                mydate.setYear(2022);//임의의 값설정
+                mydate.setMonth(11);
+                mydate.setDate(25);
+                mydate.setHours(17);
+                mydate.setMinutes(16);
+                mydate.setSeconds(30);
+        */
+        var yy = mydate.getFullYear();//연도
+        var mm = mydate.getMonth() + 1;//월추가
+        var dd = mydate.getDate();
+
+        var i = mydate.getDay();
+        var day = days[i];
+
+        var hh = mydate.getHours();//시간
+        var mi = mydate.getMinutes();//분
+        var ss = mydate.getSeconds();//초
+
+        var result = yy + "-" + mm + "-" + dd + " " + day + "요일" + hh + ":" + mi + ":" + ss;
+
+        //document.write("<h1>"+result+"</h1>");
+        document.write("<hr>");
+
+        var theday = new Date(2023, 0, 1);
+        var today = new Date();
+
+        var cnt = todady.getTime() - theday.getTime();
+
+        var dday = Math.floor(cnt / (24 * 60 * 60 * 1000));
+        //document.write("<h1>올해는 "+dday+"일 지났습니다.</h1>");
+
+        function printTime() {
+            var days = ["일", "월", "화", "수", "목", "금", "토"];
+
+            var mydate = new Date();
+
+            var yy = mydate.getFullYear();
+            var mm = mydate.getMonth() + 1;
+            var dd = mydate.getDate();
+
+            var i = mydate.getDay();
+            var day = days[i];
+
+            var hh = mydate.getHours();
+            var mi = mydate.getMinutes();
+            var ss = mydate.getSeconds();
+
+            var result = yy + "-" + mm + "-" + dd + " " + day + "요일" + hh + ":" + mi + ":" + ss;
+
+            document.getElementById("timer").innerHTML = result;
+
+        }
+
+        function startTimer() {//자바스크립트 함수 정의
+            setInterval(printTime, 1000);
+        }
+
+
+//onload = 읽자마자 바로 출력
+    </script>
+</head>
+
+<body onload="startTimer()">
+    <h1 id="timer"></h1>
+</body>
+
+</html>

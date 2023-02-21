@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+       var bbs ={
+           "title":"재미있는 Javascript+JQuery 수업에 오신것을 환영합니다.",
+           "description":"글로벌인에서 진행하는 일본 IT반 게시판으로 수업자료를 다운로드 받을 수 있는 곳 입니다.",
+           "total":4,
+           "item":[
+               {"no":"공지","subject":"재미있는 Javascript+JQuery 강의 자료실입니다.","hit":1,"date":"2022.10.18"},
+               {"no":3,"subject":"재미있는 Javascript+JQuery 3일차 강의 자료입니다.","hit":2,"date":"2023.1.15"},
+               {"no":2,"subject":"재미있는 Javascript+JQuery 2일차 강의 자료입니다.","hit":3,"date":"2023.1.04"},
+               {"no":1,"subject":"재미있는 Javascript+JQuery 1일차 강의 자료입니다.","hit":2,"date":"2022.12.13"}
+           ]
+       };
+
+       var html ="<h1>"+bbs.title+"</h1>";
+
+       html += "<p>"+bbs.description+"</p>";
+       html += "<p>총 게시물 수:"+bbs.total+"개 </p>";
+       html += "<ol type=1>";
+       for(let i=0; i<bbs.item.length;i++){
+           var item = bbs.item[i];
+           html += "<li>("+item.no+") "+item.subject+"(조회수:"+item.hit+ "/ 날짜:"+item.date+")</li>";
+       }
+       html += "</ul>";
+       document.write(html);
+ 
+        
+
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>

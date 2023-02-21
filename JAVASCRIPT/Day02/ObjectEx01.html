@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        // 비어 있는 객체 생성
+        var people ={};
+
+        // 객체안에 변수(필드)를 추가함(포함)시킨다.
+        people.name="홍길동";
+        people.gender="남자";
+
+        // 객체 안에 함수 포함 시키기
+        people.sayName = function(){
+            document.write("<h1>"+this.name+"</h1>");
+        }
+
+        people.getName = function() {
+            return this.name;
+        }
+
+        people.Info = function() {
+            document.write("<h1>"+this.getName()+"</h1>");
+        }
+
+        people.getName();
+        
+        people.sayName();
+        people.Info();
+
+        //document.write("<h1>"+people.name+"님은 "+people.gender+"입니다.</h1>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

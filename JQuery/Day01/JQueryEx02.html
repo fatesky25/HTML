@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#container {
+            width: auto;
+            border: 5px solid #f0f;
+            padding: 10px;
+        }
+
+        div#container>h1#title {
+            background-color: #d5d5d5;
+            padding: 10px;
+        }
+
+        div#container div.box {
+            padding: 10px;
+            background-color: #ff0;
+            font: 20px '궁서체';
+        }
+
+
+        div#container>ul {
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+            width: auto;
+            border: 5px solid #0f0;
+        }
+
+        div#container>ul>li:first-child,
+        div#container>ul>li:last-child {
+            padding: 3px 10px;
+            border: 3px dotted #f00;
+        }
+
+        pre {
+            font: 14px/130% 'Courier New';
+            background: #eee;
+            padding: 10px 20px;
+            margin: 10px auto;
+            border: 1px solid #555;
+            border-radius: 20px;
+        }
+    </style>
+    <script src="/JS/jquery-1.11.0.min.js"></script>
+
+    <script>
+        $(function () {
+
+            // id 값에 의한 접근(1번째 방법)
+            $("#title").html("두번째 제목");
+
+            // 자식 셀렉터(선택자)를 사용한 접근(2번째 방법)
+            $("div#container > h1#title").html("제목 입니다.");
+
+            // 자손 셀렉터를 이용한 접근
+            $("div#container div.box").html("여러분 안냥!.");
+
+            $("ul > li").html("목록입니다.");
+
+            $("ul > li:eq(1)").html("jQuery 방식!!.");
+
+            $("p, pre").html("여러개의 요소들...");
+
+            $("pre[name='source']").html("선택받은 자...");
+
+            $("ul > li:first-child").html("첫번째 목록입니다...");
+            $("ul > li:last-child").html("마지막 목록입니다...");
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <h1 id="title"></h1>
+        <div class="box"></div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <p></p>
+    <pre></pre>
+    <pre name='source'></pre>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>사용자 정의함수</title>
+    <script>
+        //함수 선언
+        function sayHello() {
+            document.write("<h1>사랑합니다.<h1>");
+            document.write("<h1>대한민국<h1>");
+        }
+
+        //함수 호출
+        /*
+        sayHello();
+        sayHello();
+        sayHello();
+        sayHello();
+        */
+       function ff(x) {
+        var y = x+z;
+        //document.write("<h1>"+y+"<h1>");
+            return y;
+       }
+
+       var a = ff(2,3);
+       var b = ff(5,10);
+
+       document.write("<h1>"+a+"<h1>");
+        document.write("<h1>"+b+"<h1>");
+
+            var str = "100+1";
+            document.write("<h1>"+str+"<h1>");
+            var rr = eval(str);
+            document.write("<h1>"+rr+"<h1>");
+
+                //eval() : 문자열을 수식으로 변환해주는 함수
+                var value = "100.6";
+                var n1 = Number(value);//100.6
+                var n2 = parseInt(value);//100
+                var n3 = n1 + n2;
+                document.write("<h1>"+n1+"</h1>");
+                document.write("<h1>"+n2+"</h1>");
+                document.write("<h1>"+n3+"</h1>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
